@@ -1,1 +1,40 @@
 
+PRODUÇÃO TEXTUAL — METEP  
+
+1 - Contextualização:
+
+O ambiente escolar ou a escola em si, é mais do que um lugar de apenas aprendizado acadêmico, é aqui onde crianças e adolescentes vão passar uma parte da vida importante e impactante para seu desenvolvimento e crescimento, vão construir vínculos sociais e ter o primeiro contato fora de casa sobre acolhimento.Portanto o ambiente escolar deve-se ser um ambiente para a promoção do bem estar e qualidade de vida, integrando junto à educação a promoção do bem-estar e da qualidade de vida. 
+Dessa forma, o Programa Saúde na Escola (PSE) foi instituído pelo Decreto Presidencial nº 6.286, em 5 de dezembro de 2007, parceria conjunta entre o Ministério da Saúde e o Ministério da Educação.Seu objetivo principal é contribuir para a formação integral dos estudantes da rede pública. Através dessa estratégia, busca-se promover o bem-estar e fortalecer a relação entre as equipes de saúde e as escolas, sempre com foco na cidadania, nos direitos humanos e no apoio coletivo (MINISTÉRIO DA SAÚDE, 2026). 
+A união entre as redes de saúde e educação permite que a escola atue diretamente na saúde em sua dimensão mais ampla, o que vai além do aspecto físico, envolvendo o ambiente e suas relações. Assim, o programa estabelece diretrizes que buscam garantir a promoção da cidadania, o respeito aos direitos humanos e, sobretudo, o acolhimento seguro das crianças e dos jovens no dia a dia (MINISTÉRIO DA EDUCAÇÃO, 2026) . A escola é um reflexo da sociedade  por isso ações conjuntas, como rodas de conversa, palestras e campanhas de conscientização, ajudam a construir um espaço de escuta e apoio mútuo, fortalecendo os vínculos afetivos entre os alunos e garantindo que todos se sintam respeitados em suas vivências diárias .
+Porém para que essas ações coletivas de promoção da paz e do cuidado emocional sejam contínuas e produtivas , é necessário que as equipes escolares contem com uma organização bem estruturada, a gestão dessas campanhas frequentemente esbarra na dificuldade de planejar e acompanhar as atividades de forma unificada. 
+É nesse cenário que a tecnologia surge como uma grande aliada, oferecendo ferramentas simples e seguras para organizar o trabalho das equipes envolvidas no PSE. A criação de um sistema de planejamento e acompanhamento, como uma aplicação executada em terminal desenvolvida em linguagem C, permite centralizar o cadastro e o monitoramento dessas atividades. Dessa forma, a escola consegue gerenciar as campanhas de cultura de paz e saúde mental, preservando a individualidade nos dados quantitativos e coletivos e focando na integridade do bem-estar dos estudantes.
+
+2- Questão norteadora
+
+De que forma um aplicativo desenvolvido em linguagem C pode ser útil para otimizar e organizar o planejamento e o acompanhamento de prevenção de violências, como o bullying, e de incentivo à saúde mental em ambientes escolares?
+
+
+Objetivo geral : 
+
+Desenvolver um sistema em terminal, utilizando a linguagem C, para otimizar e organizar o planejamento, o registro e o acompanhamento de ações coletivas focadas na prevenção de violências, como o bullying, e na promoção da saúde mental no ambiente escolar 
+
+Objetivos específicos : 
+
+Estrutura do módulo de cadastro: Criar uma rotina para registrar as ações preventivas (como rodas de conversa, palestras e capacitações), armazenando informações fundamentais como código, escola, tema, data prevista, público-alvo, responsável e quantidade esperada de participantes 
+
+Desenvolver a listagem e pesquisa: Implementar funcionalidades que 
+permitam à equipe escolar listar todas as atividades e pesquisar ações específicas (por código, escola ou tema), facilitando a localização rápida de qualquer planejamento 
+
+Gerenciar o acompanhamento das ações: Criar um mecanismo para atualizar a situação de cada evento (planejada, realizada ou cancelada), garantindo que, quando a ação for realizada, o sistema registre a quantidade real de pessoas que participaram.
+
+Elaborar relatórios de resultados: Construir um módulo de resumo geral que processe os dados e exiba o total de ações em cada status, além de calcular automaticamente o percentual de participação efetiva
+
+Assegurar a privacidade e a ética: Estruturar o sistema para manipular exclusivamente informações coletivas e quantitativas, bloqueando qualquer possibilidade de inserção de dados sensíveis, garantindo a proteção absoluta da identidade dos estudantes.
+
+ 	
+	
+3 - Justificativa acadêmica e social:
+	
+	Social : pelo lado social esse sistema justifica-se a importância em fortalecer o ambiente escolar como espaço seguro trazendo o conhecimento sobre a prevenção de bullying e a relevância da saúde mental nessas ocasiões, tendo o cuidado para preservar a identidade individual de cada estudante e assim trazendo ajuda como planejamento de rodas de conversa, palestras e campanhas incentivando a busca pela a ajuda de estudantes que estão passando por algum tipo de violência e alertando e informando de como identificar e prevenir com antecedência para que cada vez situações semelhantes ao bullying não venham a acontecer .
+
+	Acadêmico: nesse projeto a construção desta aplicação em linguagem C representa uma excelente oportunidade de aplicar, na prática a programação estudada durante o semestre, o trabalho desafia os estudantes a pensarem na usabilidade do sistema no terminal, nas estruturas condicionais, funções, armazenamento em memória e na criação de uma solução de software que resolve um problema real de forma estruturada e funcional
