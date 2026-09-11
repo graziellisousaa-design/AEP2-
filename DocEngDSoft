@@ -1,0 +1,98 @@
+
+ENGENHARIA DE SOFTWARE 
+7 - IDENTIFICAÇÃO DOS USUÁRIOS ENVOLVIDOS E DELIMITAÇÃO DO ESCOPO DO SISTEMA 
+Os usuários diretos do sistema serão os integrantes da equipe intersetorial responsável pelo planejamento e acompanhamento das ações do PSE no município. Equipe escolar: direção, coordenação pedagógica, professores e demais profissionais autorizados que participem do planejamento das atividades. Equipe de saúde: profissionais da Atenção Primária à Saúde e responsáveis por ações coletivas desenvolvidas em parceria com as escolas. Gestores ou responsáveis pelo acompanhamento do PSE: usuários encarregados de consultar o andamento das ações, consolidar dados gerais e apoiar o planejamento. Para fins acadêmicos, todos esses perfis utilizarão a mesma interface de terminal, sem necessidade de autenticação ou níveis complexos de permissão. 
+Como usuários indiretos, consideram-se os estudantes, famílias e comunidade escolar beneficiados pelas ações planejadas. Entretanto, eles não serão cadastrados individualmente no sistema. Em especial nas atividades de Anti-Bullying e saúde mental, o sistema poderá registrar informações coletivas como tema da ação, público-alvo, escola, quantidade prevista e quantidade efetiva de participantes, mas não armazenará nomes de estudantes, relatos pessoais, denúncias individuais, diagnósticos, prontuários, condições clínicas, avaliações psicológicas ou qualquer outro dado sensível individual. 
+7.1 Escopo incluído 
+• cadastrar ações coletivas do PSE, incluindo atividades de prevenção ao bullying, cultura de paz, convivência respeitosa e promoção da saúde mental; 
+• armazenar código da ação, escola, tema, data prevista, público-alvo, responsável, quantidade prevista de participantes e situação da ação; 
+• listar todas as ações cadastradas de forma organizada; 
+• pesquisar ações por código, escola ou tema; 
+• atualizar a situação da ação para planejada, realizada ou cancelada; 
+• registrar a quantidade efetiva de participantes quando uma ação for marcada como realizada; 
+• gerar resumo geral com quantidades por situação, total de participantes e percentual de participação em relação ao previsto; 
+• validar dados essenciais para reduzir erros de entrada e manter a consistência dos registros. 
+7.2 Escopo não incluído 
+• diagnóstico, triagem médica ou psicológica, prescrição, aconselhamento clínico ou recomendação de tratamento; 
+• cadastro nominal de estudantes, vítimas, autores ou testemunhas de bullying; 
+• registro de denúncias individuais, prontuários, laudos, condições clínicas ou informações sensíveis; 
+• banco de dados, interface gráfica, aplicação web ou aplicativo móvel; 
+• integração com sistemas externos, envio automático de notificações ou uso de bibliotecas avançadas; 
+• substituição da atuação dos profissionais da saúde, da educação ou dos protocolos institucionais de proteção e acolhimento. 
+8 REQUISITOS DO SISTEMA 
+Os requisitos foram definidos a partir do problema apresentado no enunciado e do escopo mínimo obrigatório. A numeração facilita a rastreabilidade entre requisitos, implementação e testes. 
+8.1 Requisitos funcionais 
+RF01 — Cadastrar ação do PSE: O sistema deverá permitir o cadastro de uma nova ação coletiva, solicitando código, escola, tema, data prevista, público-alvo, responsável, quantidade prevista de participantes e situação inicial. A temática poderá incluir, por exemplo, “Prevenção ao Bullying”, “Cultura de Paz” ou “Promoção da Saúde Mental”. 
+RF02 — Listar ações cadastradas: O sistema deverá exibir todas as ações cadastradas durante a execução, apresentando suas informações de forma organizada e compreensível para facilitar o acompanhamento pela equipe intersetorial. 
+RF03 — Pesquisar ações: O sistema deverá permitir a pesquisa de registros por código, escola ou tema, possibilitando localizar rapidamente ações relacionadas a determinada instituição ou temática. 
+RF04 — Atualizar situação da ação: O sistema deverá permitir alterar a situação de uma ação para planejada, realizada ou cancelada. Quando a situação for alterada para realizada, o sistema deverá solicitar e registrar a quantidade efetiva de participantes. 
+RF05 — Gerar resumo geral: O sistema deverá calcular e apresentar a quantidade de ações planejadas, realizadas e canceladas, o total de participantes efetivamente atendidos e o percentual de participação em relação à quantidade total prevista para as ações realizadas. 
+RF06 — Validar código único: O sistema deverá impedir o cadastro de duas ações com o mesmo código, informando ao usuário que o identificador já está em uso. 
+RF07 — Validar dados obrigatórios: O sistema deverá rejeitar quantidades negativas, campos obrigatórios vazios e opções inexistentes no menu, solicitando nova entrada quando necessário. 
+RF08 — Encerrar o sistema pelo menu: O sistema deverá disponibilizar uma opção de encerramento no menu principal e permanecer em execução, por meio de estrutura de repetição, até que o usuário escolha finalizar o programa. 
+8.2 Requisitos não funcionais 
+RNF01 — Usabilidade e clareza: O sistema deverá apresentar um menu textual simples, mensagens de confirmação e mensagens de erro objetivas, utilizando linguagem compreensível para usuários das áreas de Saúde e Educação, mesmo que não possuam conhecimento técnico de programação. 
+RNF02 — Privacidade e minimização de dados: O sistema deverá operar apenas com dados fictícios e informações coletivas sobre as ações. Não deverá solicitar, processar ou armazenar nomes de estudantes, diagnósticos, prontuários, relatos clínicos ou outros dados sensíveis individuais. 
+RNF03 — Manutenibilidade e organização do código: A implementação deverá ser dividida em funções com responsabilidades claras, utilizar nomes de variáveis compreensíveis e evitar a concentração de toda a lógica na função main, facilitando testes, correções e evolução incremental. 
+RNF04 — Compatibilidade com o escopo acadêmico: A solução deverá ser implementada em linguagem C e executada em terminal, utilizando estruturas condicionais, laços de repetição, vetores e funções, sem depender de banco de dados, interface gráfica, aplicação web ou bibliotecas avançadas. 
+RNF05 — Confiabilidade das informações: O sistema deverá aplicar validações nas entradas essenciais e realizar os cálculos do resumo a partir dos registros efetivamente armazenados em memória, evitando resultados incoerentes decorrentes de dados inválidos. 
+9 IDENTIFICAÇÃO E TRATAMENTO DE RISCOS DO PROJETO 
+A gestão de riscos é necessária para antecipar situações que possam comprometer a qualidade, o prazo, a confiabilidade ou a adequação ética do sistema. No contexto do PSE em Ação, com demonstração voltada a Anti-Bullying e saúde mental nas escolas, os riscos devem ser controlados sem ampliar o sistema para funções clínicas, denúncias individuais ou armazenamento de dados sensíveis. A tabela a seguir apresenta os principais riscos identificados e as respectivas estratégias de prevenção e mitigação. 
+ID 
+Risco identificado 
+Probabilidade 
+Impacto 
+Estratégia de prevenção/mitigação 
+R01 
+      Cadastro    deinformações incorretas ou incompletas 
+Média 
+Médio 
+Aplicar validações para código único, campos obrigatórios, quantidades não negativas e opções válidas; testar entradas normais e inválidas. 
+R02 
+Exposição ou
+ inclusão indevida de dados pessoais/sensíveis de estudantes 
+Baixa 
+Alto 
+Limitar o sistema a dados fictícios e coletivos;
+ não cadastrar nomes, diagnósticos, relatos individuais, prontuários, vítimas, autores ou testemunhas de bullying. 
+R03 
+Desvio do escopo
+ para diagnóstico, triagem, denúncia individual ou recomendação clínica 
+Baixa 
+Alto 
+Revisar cada incremento à luz do escopo definido; rejeitar funcionalidades que substituam profissionais de saúde/educação
+ ou protocolos institucionais 
+de acolhimento e proteção. 
+R04 
+Atraso nas entregas das sprints semanais 
+Média 
+Médio 
+Dividir as atividades em entregas pequenas,
+ definir responsáveis, acompanhar o progresso semanalmente e priorizar primeiro o escopo mínimo obrigatório. 
+R05 
+Falhas de integração entre cadastro, pesquisa, atualização e resumo 
+Média 
+Alto 
+Integrar as funções de forma incremental e 
+executar testes de integração após cada 
+novo módulo, verificando se os registros permanecem consistentes. 
+R06 
+Cálculo incorreto do total de participantes ou do percentual de participação 
+Média 
+Alto 
+Criar casos de teste com resultados previamente conhecidos, considerar apenas ações realizadas no total efetivo e tratar situações em que o total previsto seja zero. 
+R07 
+Baixa usabilidade para profissionais não técnicos 
+Média 
+Médio 
+Utilizar menu textual simples, mensagens claras de confirmação/erro, opções numeradas e sequência de interação padronizada; realizar teste de uso com dados fictícios. 
+
+Os riscos deverão ser revistos ao final de cada sprint. Caso um risco se concretize, a equipe deverá registrar o problema, corrigir o incremento afetado e verificar novamente os requisitos relacionados. Essa prática reforça a rastreabilidade entre problema, requisitos, implementação, testes e limites éticos do projeto. 
+10 - PROCESSO DE DESENVOLVIMENTO ADOTADO 
+Será adotado um processo de desenvolvimento incremental com entregas semanais. A escolha é adequada ao projeto porque permite dividir o sistema em partes menores e funcionais, validar cada incremento antes de acrescentar novas funcionalidades e corrigir problemas ao longo do semestre. Em vez de implementar todo o programa apenas ao final, a equipe produzirá sucessivas versões do software, cada uma acrescentando requisitos previamente definidos. 
+O ciclo de cada incremento será composto por quatro atividades principais: planejar, modelar, implementar e verificar. No início de cada sprint, o grupo definirá o objetivo da semana e os requisitos envolvidos. Em seguida, realizará a modelagem necessária por meio de descrições, fluxogramas, pseudocódigos ou definição das estruturas de dados. Depois será feita a implementação em linguagem C. Ao final, serão executados testes com dados fictícios, registrados os resultados e atualizada a documentação. Essa repetição semanal favorece a rastreabilidade entre o problema social, os requisitos, os algoritmos e o código produzido. 
+Para o contexto de Anti-Bullying e saúde mental, o processo incremental também contribui para o controle do escopo ético: a cada nova funcionalidade, a equipe deverá verificar se o software continua trabalhando somente com informações coletivas e se não passou a solicitar dados individuais desnecessários. Assim, privacidade, simplicidade e adequação ao nível introdutório do curso são tratadas como critérios permanentes de desenvolvimento. 
+11 - PLANEJAMENTO DAS 14 SPRINTS SEMANAIS 
+https://trello.com/invite/b/6a8d974cfa3b4294aa48e125/ATTI12b7881a58f5e7b71006f143eb71f5d7E0467F79/aep-2-2026-esoft-2-ma
+
+O planejamento abaixo distribui o trabalho em 14 sprints semanais, cobrindo levantamento, modelagem, implementação, testes, documentação e preparação da apresentação final. Cada sprint possui um objetivo principal e uma entrega verificável. 
