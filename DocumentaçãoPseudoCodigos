@@ -1,0 +1,98 @@
+Fluxograma e PseudoCódigos:
+3. Pseudocódigos
+Os pseudocódigos abaixo formalizam, em linguagem estruturada, a lógica representada nos fluxogramas das 
+seções anteriores. Eles servirão de base direta para a implementação das funções em linguagem C na 2ª etapa 
+da AEP, especialmente quanto ao uso de estrutura de repetição no menu, de vetor de registros (struct) para 
+armazenar as ações e de validações de entrada.
+3.1 Pseudocódigo — Menu principal (fluxograma geral)
+ 
+INÍCIO
+DECLARAR vetorAcoes[MAX] do tipo Acao
+DECLARAR contador = 0
+DECLARAR opcao
+ 
+REPITA
+EXIBIR "1 - Cadastrar ação"
+EXIBIR "2 - Listar ações"
+EXIBIR "3 - Pesquisar ações"
+EXIBIR "4 - Atualizar situação e registrar participantes"
+EXIBIR "5 - Gerar resumo geral"
+EXIBIR "0 - Sair"
+LER opcao
+ 
+ESCOLHA opcao
+CASO 1: cadastrarAcao(vetorAcoes, contador)
+CASO 2: listarAcoes(vetorAcoes, contador)
+CASO 3: pesquisarAcao(vetorAcoes, contador)
+CASO 4: atualizarSituacao(vetorAcoes, contador)
+CASO 5: gerarResumo(vetorAcoes, contador)
+CASO 0: EXIBIR "Encerrando o sistema..."
+CASO CONTRÁRIO: EXIBIR "Opção inválida. Tente novamente."
+FIM ESCOLHA
+ 
+ATÉ QUE opcao == 0
+FIM
+ 
+3.2 Pseudocódigo — Atualizar Situação e Registrar Participantes (fluxograma 
+detalhado)
+ 
+PROCEDIMENTO atualizarSituacao (vetorAcoes, contador)
+REPITA
+listarAcoes(vetorAcoes, contador)
+LER codigoSelecionado
+ 
+SE codigoSelecionado não existe no vetor ENTÃO
+EXIBIR "Ação não encontrada"
+RETORNAR
+FIM SE
+ 
+i = posição da ação com código = codigoSelecionado
+ 
+EXIBIR código, escola, tema, responsável,
+       público-alvo e quantidade prevista
+EXIBIR "Situação atual: ", vetorAcoes[i].situacao
+ 
+EXIBIR "Deseja alterar a situação desta ação? (S/N)"
+LER resposta
+ 
+SE resposta == "S" ENTÃO
+EXIBIR "1 - Planejada"
+EXIBIR "2 - Realizada"
+EXIBIR "3 - Cancelada"
+LER opcaoSituacao
+ 
+ESCOLHA opcaoSituacao
+CASO 1: novaSituacao = "Planejada"
+CASO 2: novaSituacao = "Realizada"
+CASO 3: novaSituacao = "Cancelada"
+CASO CONTRÁRIO:
+EXIBIR "Opção inválida. Situação não alterada."
+novaSituacao = vetorAcoes[i].situacao
+FIM ESCOLHA
+ 
+SE novaSituacao == "Realizada" ENTÃO
+REPITA
+LER quantidadeReal
+valida = (quantidadeReal >= 0)
+SE NÃO valida ENTÃO
+EXIBIR "Quantidade inválida"
+FIM SE
+ATÉ QUE valida == VERDADEIRO
+ 
+vetorAcoes[i].situacao = "Realizada"
+vetorAcoes[i].quantidadeRealizada = quantidadeReal
+SENÃO
+vetorAcoes[i].situacao = novaSituacao
+FIM SE
+ 
+EXIBIR "Situação atualizada com sucesso!"
+FIM SE
+ 
+EXIBIR "Deseja atualizar outra ação? (S/N)"
+LER continuar
+ATÉ QUE continuar == "N"
+FIM PROCEDIMENTO
+
+
+
+
