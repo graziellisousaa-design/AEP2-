@@ -12,12 +12,7 @@ Git
 
 -FUNCIONALIDADES
 
-Cadastrar ações
-Listar ações
-Pesquisar por código, escola ou tema
-Atualizar a situação das ações
-Registrar participantes
-Gerar um resumo geral
+Exibe o menu com as 6 opções (cadastrar, listar, pesquisar, atualizar situação, gerar resumo, sair)
 
 -INTEGRANTES:
 Grazielli Sousa de Andrade RA: 26007293-2
