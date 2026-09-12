@@ -3,7 +3,9 @@ AEP - Trabalho UNICESUMAR
 -PSE EM AÇÃO
 
 Sistema de Planejamento e Acompanhamento de Ações de Saúde na Escola.
+
 -SOBRE O PROJETO
+
 Projeto da AEP do 2º semestre de 2026, do curso de Engenharia de Software da Unicesumar.
 A proposta é: desenvolver um sistema em terminal, utilizando a linguagem C, para otimizar e organizar o planejamento, o registro e o acompanhamento de ações coletivas focadas na prevenção de violências, como o bullying, e na promoção da saúde mental no ambiente escolar 
 TECNOLOGIAS
